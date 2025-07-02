@@ -1,0 +1,61 @@
+.volumeIcons {
+  fill: #a3a3a5;
+  padding: 2px;
+}
+.volumeIcons:hover {
+  fill: #4d4d4d;
+}
+.customInputWrap {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.labelInput {
+  font-weight: 500;
+  font-size: 16px;
+  color: #656565;
+}
+
+.inputCounter {
+  width: 44px;
+  position: relative;
+  /* display: flex;
+  align-items: center;
+  gap: 4px; */
+}
+
+.customInput {
+  width: 18px;
+  padding: 6px 18px 6px 8px;
+  border: none;
+  border-radius: 6px;
+  background-color: #e5e7eb;
+  appearance: none;
+  -moz-appearance: textfield;
+  font-size: 16px;
+  color: #656565;
+}
+
+.customInput::-webkit-outer-spin-button,
+.customInput::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.volumeBtns {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 3px 8px;
+  width: 6px;
+  height: 6px;
+}
+.volumeBtnsWrap {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 5px;
+  top: -1.5px;
+  right: 4px;
+}
