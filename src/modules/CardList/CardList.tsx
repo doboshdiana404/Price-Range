@@ -1,8 +1,14 @@
 import { useState } from "react";
 import Card from "../../components/Card/Card";
-import { cards } from "../../data";
 import Pagination from "../../components/Pagination/Pagination";
-const CardList = () => {
+type CardType = {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  city: string;
+};
+const CardList = ({ cards }: { cards: CardType[] }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [cardsPerPage, setCardsPerPage] = useState(10);
   const totalPages = Math.ceil(cards.length / cardsPerPage);

@@ -1,0 +1,146 @@
+.priceFilter {
+  font-family: sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.priceHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 12px;
+  padding-top: 34px;
+  border-top: 2px solid #d1d5db;
+}
+
+.sliderWrapper {
+  position: relative;
+  margin-bottom: 24px;
+  padding-top: 120px;
+}
+
+.histogramOverlay {
+  position: absolute;
+  bottom: 6%;
+  left: 50.3%;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  transform: translateX(-50%);
+  pointer-events: none;
+  gap: 2px;
+  z-index: 1;
+}
+.customLine {
+  width: 100%;
+  height: 4px;
+  background-color: #d9d9d9;
+  position: absolute;
+  bottom: 5%;
+}
+
+.histBar {
+  flex: 1;
+  background-color: #ccc;
+  border-radius: 1px;
+  width: 10px;
+  cursor: pointer;
+  pointer-events: all;
+  transition: background-color 0.2s;
+}
+
+.histBar:hover {
+  background-color: #999;
+}
+
+.customSlider {
+  padding: 10px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.customSlider :global(.rc-slider-rail) {
+  background-color: #e5e5e5;
+  height: 2px;
+}
+
+.customSlider :global(.rc-slider-track) {
+  background-color: #000;
+  height: 2px;
+}
+
+.customSlider :global(.rc-slider-handle) {
+  width: 32px;
+  height: 32px;
+  background-color: #000;
+  border: none;
+  border-radius: 50%;
+  top: 5%;
+  transform: translateY(-50%);
+  box-shadow: none;
+}
+
+.customSlider :global(.rc-slider-handle:focus) {
+  outline: none;
+  box-shadow: none;
+}
+:global(.rc-slider) {
+  width: 600px;
+  margin: 0 auto;
+}
+.priceInputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.priceInputs > div {
+  flex: 1;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.priceInputs p {
+  margin: 0;
+  font-size: 22px;
+  color: #6b7280;
+}
+
+.priceInputs .value {
+  font-weight: 600;
+  font-size: 28px;
+  color: #4b4b4b;
+}
+.priceRangeInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.label {
+  font-weight: 600;
+  font-size: 26px;
+  color: #000;
+}
+.average {
+  font-weight: 500;
+  font-size: 20px;
+  color: #6b7280;
+}
+.filtersTitle {
+  font-weight: 600;
+  font-size: 26px;
+  color: #1e1e1e;
+}
+.titleAndCloseWrap {
+  margin-bottom: 34px;
+  display: flex;
+  justify-content: space-between;
+}
+.closeBtn {
+  border: none;
+  background-color: transparent;
+}
