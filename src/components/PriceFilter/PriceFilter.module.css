@@ -3,7 +3,7 @@
   width: 100%;
   margin: 0 auto;
   padding-top: 12px;
-  padding-bottom: 12px;
+  padding-bottom: 24px;
   position: relative;
 }
 
@@ -37,16 +37,16 @@
 .customLine {
   width: 100%;
   height: 4px;
-  background-color: #d9d9d9;
+  background-color: var(--text-color5);
   position: absolute;
   bottom: 5%;
 }
 
 .histBar {
   flex: 1;
-  background-color: #ccc;
+  background-color: var(--text-color5);
   border-radius: 1px;
-  width: 10px;
+  width: 4px;
   cursor: pointer;
   pointer-events: all;
   transition: background-color 0.2s;
@@ -68,14 +68,14 @@
 }
 
 .customSlider :global(.rc-slider-track) {
-  background-color: #000;
+  background-color: var(--text-color);
   height: 2px;
 }
 
 .customSlider :global(.rc-slider-handle) {
   width: 32px;
   height: 32px;
-  background-color: #000;
+  background-color: var(--text-color);
   border: none;
   border-radius: 50%;
   top: 5%;
@@ -88,7 +88,7 @@
   box-shadow: none;
 }
 :global(.rc-slider) {
-  width: 600px;
+  width: 304px;
   margin: 0 auto;
 }
 .priceInputs {
@@ -107,13 +107,13 @@
 .priceInputs p {
   margin: 0;
   font-size: 22px;
-  color: #6b7280;
+  color: var(--text-color2);
 }
 
 .priceInputs .value {
   font-weight: 600;
   font-size: 28px;
-  color: #4b4b4b;
+  color: var(--text-color3);
 }
 .priceRangeInfo {
   display: flex;
@@ -123,17 +123,15 @@
 .label {
   font-weight: 600;
   font-size: 26px;
-  color: #000;
 }
 .average {
   font-weight: 500;
   font-size: 20px;
-  color: #6b7280;
+  color: var(--text-color2);
 }
 .filtersTitle {
   font-weight: 600;
   font-size: 26px;
-  color: #1e1e1e;
 }
 .titleAndCloseWrap {
   margin-bottom: 34px;
@@ -143,4 +141,12 @@
 .closeBtn {
   border: none;
   background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .histBar {
+    width: 10px;
+  }
+  :global(.rc-slider) {
+    width: 600px;
+  }
 }

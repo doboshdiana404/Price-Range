@@ -14,15 +14,12 @@
 .labelInput {
   font-weight: 500;
   font-size: 16px;
-  color: #656565;
+  color: var(--text-color4);
 }
 
 .inputCounter {
   width: 44px;
   position: relative;
-  /* display: flex;
-  align-items: center;
-  gap: 4px; */
 }
 
 .customInput {
@@ -30,11 +27,11 @@
   padding: 6px 18px 6px 8px;
   border: none;
   border-radius: 6px;
-  background-color: #e5e7eb;
+  background-color: var(--bg-color2);
   appearance: none;
   -moz-appearance: textfield;
   font-size: 16px;
-  color: #656565;
+  color: var(--text-color4);
 }
 
 .customInput::-webkit-outer-spin-button,

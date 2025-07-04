@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { cards } from "../../data";
+import { cards } from "../../data/cards";
 import CardList from "../../modules/CardList/CardList";
 import PriceFilter from "../PriceFilter/PriceFilter";
 
@@ -41,7 +41,7 @@ const CardsPage = () => {
               fontWeight: "600",
               fontSize: "26px",
               backgroundColor: "transparent",
-              color: "#000",
+              color: "var(--text-color)",
               border: "none",
               cursor: "pointer",
             }}
@@ -50,7 +50,7 @@ const CardsPage = () => {
             <svg
               width={15}
               height={15}
-              style={{ fill: "rgba(0, 0, 0, 0.6)", marginLeft: "6px" }}
+              style={{ fill: "var(--text-color4)", marginLeft: "6px" }}
             >
               <use href="/sprite.svg#icon-decrease"></use>
             </svg>

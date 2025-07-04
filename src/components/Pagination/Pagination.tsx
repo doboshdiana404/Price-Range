@@ -47,8 +47,9 @@ const Pagination: React.FC<Props> = ({
               onClick={() => onPageChange(page)}
               style={{
                 backgroundColor:
-                  currentPage === page ? "#e5e7eb" : "transparent",
-                border: currentPage == page ? "none" : "1px solid #c7c7c7",
+                  currentPage === page ? "var(--bg-color2)" : "transparent",
+                border: currentPage === page ? "none" : "1px solid #c7c7c7",
+                color: currentPage === page ? "#000" : "var(--text-color)",
               }}
               className={styles.numberPage}
             >

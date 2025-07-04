@@ -3,23 +3,22 @@
   box-sizing: border-box;
   padding: 24px;
   border-radius: 6px;
-  background-color: #f3f4f6;
+  background-color: var(--background-cards);
   margin-bottom: 24px;
 }
+
 .cardDescription {
   font-weight: 400;
   font-size: 16px;
-  color: #6b7280;
+  color: var(--text-color2);
 }
 .nameProduct {
   font-weight: 700;
   font-size: 16px;
-  color: #000;
 }
 .priceProduct {
   font-weight: 700;
   font-size: 20px;
-  color: #000;
 }
 @media (min-width: 768px) {
   .itemCard {

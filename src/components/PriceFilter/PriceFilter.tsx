@@ -3,6 +3,7 @@ import Slider from "rc-slider";
 import styles from "./PriceFilter.module.css";
 import { generatePriceHistogram } from "../../utils/generatePriceHistogram";
 import type { Props } from "./types";
+import ThemeToggle from "../../ui/ThemeToggle/ThemeToggle";
 
 const PriceFilter = ({
   cards,
@@ -50,7 +51,9 @@ const PriceFilter = ({
             {Math.round((minPrice + maxPrice) / 2)}
           </span>
         </div>
-        <div>Dark mode</div>
+        <div>
+          <ThemeToggle />
+        </div>
       </div>
 
       <div className={styles.sliderWrapper}>

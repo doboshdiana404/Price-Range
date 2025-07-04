@@ -4,7 +4,6 @@
   padding: 6px 12px;
   font-size: 16px;
   text-align: center;
-  color: #000;
 }
 .paginationBtns {
   border: 1px solid #c7c7c7;
@@ -13,8 +12,8 @@
   background-color: transparent;
   font-size: 16px;
   text-align: center;
-  color: rgba(0, 0, 0, 1);
   margin-right: 12px;
+  color: var(--text-color);
 }
 .paginationBtns:disabled {
   cursor: not-allowed;
@@ -22,7 +21,7 @@
   color: rgba(0, 0, 0, 0.5);
 }
 .paginationBtns:hover:not(:disabled) {
-  background-color: #f0f0f0;
+  background-color: var(--bg-btns);
 }
 .paginationSection {
   margin-bottom: 30px;
