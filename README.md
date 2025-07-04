@@ -6,11 +6,11 @@
 
 ## 🖼 Demo
 
-[Product cards, sorting options and pagination](./public/demo1.mp4)
-[Price filtering with slider and histogram](./public/demo2.mp4)
-[Light and dark theme toggle](./public/demo3.mp4)
+![Product cards, sorting options and pagination](./public/demo1.gif)
+![Price filtering with slider and histogram](./public/demo2.gif)
+![Light and dark theme toggle](./public/demo3.gif)
 
----
+## 🔗 [Live Demo](https://pricerange.netlify.app/)
 
 ## 🔍 Features
 
@@ -82,8 +82,6 @@ src/
 ├── App.tsx
 ├── index.css
 └── main.tsx
-
-## 🌗 Theme Toggle
 
 ## 🌗 Theme Toggle
 
