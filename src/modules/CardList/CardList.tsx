@@ -9,6 +9,7 @@ const CardList = ({ cards }: { cards: CardType[] }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [cardsPerPage, setCardsPerPage] = useState(10);
   const [sortOption, setSortOption] = useState<SortOption>("Lowest price");
+
   const sortedCards = [...cards].sort((a, b) => {
     switch (sortOption) {
       case "Lowest price":
@@ -54,19 +55,13 @@ const CardList = ({ cards }: { cards: CardType[] }) => {
         setCurrentPage={setCurrentPage}
         totalPages={totalPages}
         onPageChange={handlePageChange}
+        cardsPerPage={cardsPerPage}
+        setCardsPerPage={setCardsPerPage}
       />
 
-      {currentCards.map(
-        (card: {
-          id: number;
-          title: string;
-          description: string;
-          price: number;
-          city: string;
-        }) => (
-          <Card key={card.id} {...card} />
-        )
-      )}
+      {currentCards.map((card) => (
+        <Card key={card.id} {...card} />
+      ))}
     </div>
   );
 };

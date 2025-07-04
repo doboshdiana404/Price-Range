@@ -1,69 +1,126 @@
-# React + TypeScript + Vite
+# 💸 Price-Range
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Price-Range** is a React + TypeScript web application that displays a list of product cards with pagination, price filtering, sorting options, and a light/dark theme toggle. It’s a simple and clean UI project built with mock data.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖼 Demo
 
-## Expanding the ESLint configuration
+[Product cards, sorting options and pagination](./public/demo1.mp4)
+[Price filtering with slider and histogram](./public/demo2.mp4)
+[Light and dark theme toggle](./public/demo3.mp4)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🔍 Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- 🧾 Product card list with pagination
+- 🎚 Price filtering with:
+  - Double range slider
+  - Interactive price histogram
+- ↕️ Sorting options:
+  - Lowest Price
+  - Closest
+  - Newest Listings
+  - Specification
+  - Retailer
+- 🌗 Light/Dark theme toggle using React Context
+- 🎯 Simple, responsive layout with CSS Modules
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## ⚙️ Tech Stack
+
+- React + Vite
+- TypeScript
+- CSS Modules
+- Context API
+- HTML inputs (`range`) + custom logic for histogram
+- Mock data (no backend)
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/doboshdiana404/Price-Range.git
+cd price-range
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Run Locally
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+## Project Structure
+
+src/
+├── components/ # UI components
+│ ├── Card/ # Product card
+│ ├── CardsPage/ # Page layout + logic
+│ ├── Pagination/ # Pagination controls
+│ ├── PriceFilter/ # Histogram + slider
+│ └── SortButtons/ # Sorting by criteria
+├── context/
+│ └── ThemeContext.tsx # Context for theme
+├── data/
+│ └── cards.ts # Mock product list
+├── hooks/
+│ └── ThemeProvider.tsx # Context provider logic
+├── modules /CardList/
+│ ├── CardList.tsx # Filtered + paginated list
+│ └── types.ts # Card-related types
+├── ui/
+│ ├── CardsPerPageInput/ # UI for changing cards per page
+│ └── ThemeToggle/ # Switch between light/dark theme
+├── utils/
+│ ├── generatePriceHistogram.ts # Helper for histogram bins
+│ └── types.ts # Utility types
+├── App.module.css
+├── App.tsx
+├── index.css
+└── main.tsx
+
+## 🌗 Theme Toggle
+
+## 🌗 Theme Toggle
+
+Theme switching is handled via React Context and CSS variables.  
+The selected theme is saved in `localStorage`, so your preference persists across sessions.
+
+```css
+:root {
+  --text-color: #000000;
+  --background-cards: #f3f4f6;
+}
+
+.dark {
+  --text-color: #f1f1f1;
+  --background-cards: #474748;
+}
+
+body {
+  background-color: var(--background-cards);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+```
+
+## Mock Data
+
+The application uses mock data generated locally from `src/data/cards.ts`.  
+Each card includes:
+
+- `id` — unique identifier
+- `title` — product name
+- `description` — product description
+- `price` — numeric value for filtering/sorting
+- `city` — city name (used for mock sorting by "Closest")
+- `year` — year release (used for mock sorting by "Newest Listings")
+
+## ✍️ Author
+
+Diana Dobosh
+GitHub: @doboshdiana404

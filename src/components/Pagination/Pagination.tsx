@@ -1,14 +1,15 @@
 import type { Props } from "./types";
 import styles from "./Pagination.module.css";
 import CardsPerPageInput from "../../ui/CardsPerPageInput/CardsPerPageInput";
-import { useState } from "react";
+
 const Pagination: React.FC<Props> = ({
   totalPages,
   currentPage,
   setCurrentPage,
   onPageChange,
+  cardsPerPage,
+  setCardsPerPage,
 }) => {
-  const [cardsPerPage, setCardsPerPage] = useState(10);
   const pageGroupSize = 10;
   const currentGroup = Math.floor((currentPage - 1) / pageGroupSize);
   const currentGroupStart = currentGroup * pageGroupSize + 1;
@@ -74,6 +75,7 @@ const Pagination: React.FC<Props> = ({
           </button>
         </div>
       </div>
+
       <CardsPerPageInput
         value={cardsPerPage}
         onChange={(value) => {
